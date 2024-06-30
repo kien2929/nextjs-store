@@ -1,21 +1,23 @@
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import Image from "next/image";
+import Link from "next/link";
+import ButtonRedirect from "@/app/components/ButtonRedirect";
+import { redirect } from "next/navigation";
 
+const isAuth = false
 export default function Home() {
+  // if (!isAuth) {
+  //   redirect('/login')
+  // }
   return (
     <main>
-      <h1 className="text-4xl font-thin text-center">
-        Xin chào, đây là trang chủ của tôi
-      </h1>
-      <div className="w-[700px] h-[700px] bg-red-300">
-        <Image
-          src='/images/cat.webp'
-          alt="Cat"
-          width={200}
-          height={200}
-        />
-      </div>
+      <ul>
+        <li>
+          <Link href={'/login'}>Login</Link>
+        </li>
+        <li>
+          <Link href={'/register'}>Register</Link>
+        </li>
+      </ul>
+    <ButtonRedirect/>
     </main>
   );
 }
