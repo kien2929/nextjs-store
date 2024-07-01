@@ -1,12 +1,14 @@
-'use client'
+import LoginForm from "@/app/(auth)/login/login-form"
 import { useState } from "react"
 
 export default function Login() {
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
-
   return (
-    <div>login page</div>
+    <div>
+      <h1 className="text-xl font-semibold text-center">Login</h1>
+      <div className="flex justify-center">
+        <LoginForm />
+      </div>
+    </div>
   )
 }
 

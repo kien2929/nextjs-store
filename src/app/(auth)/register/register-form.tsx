@@ -47,9 +47,6 @@ export default function RegisterForm() {
               <FormControl>
                 <Input placeholder="name" {...field} />
               </FormControl>
-              <FormDescription>
-                This is your public display name.
-              </FormDescription>
               <FormMessage />
             </FormItem>
           )}
@@ -63,9 +60,6 @@ export default function RegisterForm() {
               <FormControl>
                 <Input placeholder="email" type="email" {...field} />
               </FormControl>
-              <FormDescription>
-                This is your public display name.
-              </FormDescription>
               <FormMessage />
             </FormItem>
           )}
@@ -77,11 +71,8 @@ export default function RegisterForm() {
             <FormItem>
               <FormLabel>Password</FormLabel>
               <FormControl>
-                <Input placeholder="email" type="password" {...field} />
+                <Input placeholder="password" type="password" {...field} />
               </FormControl>
-              <FormDescription>
-                This is your public display name.
-              </FormDescription>
               <FormMessage />
             </FormItem>
           )}
@@ -93,16 +84,13 @@ export default function RegisterForm() {
             <FormItem>
               <FormLabel>Confirm Password</FormLabel>
               <FormControl>
-                <Input placeholder="email" type="password" {...field} />
+                <Input placeholder="password" type="password" {...field} />
               </FormControl>
-              <FormDescription>
-                This is your public display name.
-              </FormDescription>
               <FormMessage />
             </FormItem>
           )}
         />
-        <Button className="!mt-8 w-full" type="submit">Submit</Button>
+        <Button className="!mt-8 w-full" type="submit">Register</Button>
       </form>
     </Form>
   )
