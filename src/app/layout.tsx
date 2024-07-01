@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/mode-toggle"
 import "./globals.css";
+import Header from "@/components/header";
 
 const inter = Inter({ subsets: ["vietnamese"] });
 
@@ -23,7 +24,9 @@ export default function RootLayout({
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
-        >{children}
+        >
+          <Header />
+          {children}
         </ThemeProvider>
       </body>
     </html>
