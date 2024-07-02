@@ -6,7 +6,6 @@ import { Button } from "@/components/ui/button"
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -46,6 +45,10 @@ export default function LoginForm() {
       })
       toast({
         description: result.payload.message
+      })
+      await fetch('/api/auth', {
+        method: 'POST',
+        body: JSON.stringify(result.payload.data)
       })
     } catch (error: any) {
       const errors = error.payload.errors as {
